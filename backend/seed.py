@@ -15,9 +15,18 @@ JOBS = [
         "model_output": "The capital of Australia is Sydney.",
     },
     {
-        "title": "Code generation — exact match",
-        "prompt": "Write a Python one-liner to reverse a list called `items`.",
-        "model_output": "items[::-1]",
+        "title": "Contact extraction — JSON output",
+        "prompt": (
+            "Extract the contact's name, email, and company from this text: "
+            "Jane Doe from Acme Corp can be reached at jane.doe@acme.com."
+        ),
+        "model_output": (
+            '{\n'
+            '  "name": "Jane Doe",\n'
+            '  "email": "jane.doe@acme.com",\n'
+            '  "company": "Acme Corp"\n'
+            "}"
+        ),
     },
     {
         "title": "Open-ended explanation — partial credit",
@@ -29,9 +38,19 @@ JOBS = [
         ),
     },
     {
-        "title": "Math — equivalent notation",
-        "prompt": "What is the derivative of f(x) = x³ + 2x² − 5x + 1?",
-        "model_output": "f'(x) = 3x^2 + 4x - 5",
+        "title": "Invoice extraction — JSON output",
+        "prompt": (
+            "Extract invoice fields from this text: Invoice INV-1024 for $349.50 "
+            "is due on 2026-06-15 and should be paid by Globex LLC."
+        ),
+        "model_output": (
+            '{\n'
+            '  "invoice_id": "INV-1024",\n'
+            '  "amount": "349.50",\n'
+            '  "due_date": "2026-06-15",\n'
+            '  "customer": "Globex LLC"\n'
+            "}"
+        ),
     },
 ]
 
