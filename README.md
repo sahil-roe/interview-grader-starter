@@ -15,6 +15,8 @@ uv run uvicorn main:app --reload --port 8001
 
 API runs at http://127.0.0.1:8001. Docs at http://127.0.0.1:8001/docs.
 
+Score model graders require `OPENAI_API_KEY` in the backend environment.
+
 ### Frontend
 
 ```bash
