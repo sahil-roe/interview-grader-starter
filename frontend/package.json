@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=--localstorage-file=/tmp/interview-grader-localstorage NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next dev -p 3001",
-    "build": "NODE_OPTIONS=--localstorage-file=/tmp/interview-grader-localstorage NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next build",
-    "start": "NODE_OPTIONS=--localstorage-file=/tmp/interview-grader-localstorage NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next start"
+    "dev": "NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next dev -p 3001",
+    "build": "NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next build",
+    "start": "NEXT_PUBLIC_API_URL=http://127.0.0.1:8001 next start"
   },
   "dependencies": {
     "next": "15.3.2",
